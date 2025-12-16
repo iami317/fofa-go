@@ -14,18 +14,18 @@
 package fofa
 
 import (
+	"bytes"
 	"crypto/tls"
 	"encoding/base64"
 	"encoding/json"
 	"errors"
 	"fmt"
-	"log"
+	"github.com/buger/jsonparser"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"strconv"
-	"bytes"
 	"strings"
-	"github.com/buger/jsonparser"
 )
 
 // Fofa a fofa client can be used to make queries
@@ -60,7 +60,7 @@ type User struct {
 type Results []result
 
 const (
-	defaultAPIUrl = "https://fofa.so/api/v1/search/all?"
+	defaultAPIUrl = "https://fofa.info/api/v1/search/all?"
 )
 
 var (
